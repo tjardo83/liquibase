@@ -68,7 +68,17 @@ public class StringUtils {
                 endDelimiter = "\\n[gG][oO]\\s*\\n|\\n[Gg][oO]\\s*$";
             }
         }
-        String[] initialSplit = multiLineSQL.split(endDelimiter);
+
+        String[] initialSplit;
+        if ("/".equals(endDelimiter)) {
+            String regexExcludingComment = "(?<!\\*)/((?!\\*)(?!.|\\n*\\*/))";
+            Pattern pattern = Pattern.compile(regexExcludingComment);
+            initialSplit = pattern.split(multiLineSQL);
+
+        } else {
+            initialSplit = multiLineSQL.split(endDelimiter);
+        }
+
         List<String> strings = new ArrayList<String>();
         for (String anInitialSplit : initialSplit) {
             String singleLineSQL = anInitialSplit.trim();
