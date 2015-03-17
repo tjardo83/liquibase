@@ -18,3 +18,4 @@ derby.log
 *.iml
 .DS_Store
 /tmp
+liquibase-core/liquibase.local.properties
