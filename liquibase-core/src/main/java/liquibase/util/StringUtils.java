@@ -92,7 +92,7 @@ public class StringUtils {
 
     /**
      * Searches through a String which contains SQL code and strips out
-     * any comments that are between \/**\/ or anything that matches
+     * any comments that are between \/**\/ or anything hat matches
      * SP--SP<text>\n (to support the ANSI standard commenting of --
      * at the end of a line).
      * 

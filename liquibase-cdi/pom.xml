@@ -3,9 +3,10 @@
     <parent>
         <groupId>org.liquibase</groupId>
         <artifactId>liquibase-parent</artifactId>
-        <version>3.4.0-SNAPSHOT</version>
+        <version>3.4.0-TKP_patch</version>
     </parent>
     <artifactId>liquibase-cdi</artifactId>
+    <version>3.4.0-TKP_patch</version>
     <name>Liquibase CDI</name>
 
     <build>
